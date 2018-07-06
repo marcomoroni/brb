@@ -46,4 +46,23 @@
   </script>
   <div id="overlay"></div>
   <input type="text" value="brb" id="brb"></p>
+  <script>
+  var theme = 0;
+  document.onkeydown = function(){
+    if(window.event && window.event.keyCode == 84) {
+      var overlay = document.getElementById("overlay");
+      var brb = document.getElementById("brb");
+      if (theme == 0) {
+        overlay.style.backgroundColor = "#d1d1d1";
+        brb.style.color = "black";
+        theme = 1;
+      }
+      else {
+        overlay.style.backgroundColor = "#202020";
+        brb.style.color = "white";
+        theme = 0;
+      }
+    }
+  }
+  </script>
 </body>
