@@ -1,0 +1,53 @@
+@font-face {
+  /* http://downloads.paperyoshi.at/product/nintendo-switch-ui-font/ */
+  font-family: "Switch";
+  src: url("Nintendo_Switch_UI_Font.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Switch', sans-serif;
+  font-size: 100%;
+  font-weight: 300;
+  text-decoration: none;
+  line-height: 180%
+}
+
+body {
+  position: relative;
+}
+
+#player_container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#player {
+  position: relative;
+  top: calc(50% - 1500px);
+  left: calc(50% - 1500px);
+}
+
+#overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#brb {
+  position: absolute;
+  color: white;
+  text-align: center;
+  font-size: 200%;
+  letter-spacing: 3px;
+  display: block;
+  width: 1200px;
+  top: 46%;
+  left: calc(50% - 600px);
+  background-color: transparent;
+  border: none;
+}

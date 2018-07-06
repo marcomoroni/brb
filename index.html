@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>brb</title>
+  <meta name="description" content="Be right back.">
+  <meta name="viewport" content="width=device-width, maximum-scale=1, minimum-scale=1" />
+  <link rel="stylesheet" href="style.css">
+  <!-- <link rel="icon" href="https://github.com/{{ site.github_username }}.png?size=16"> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="hideIdleCursor.js"></script>
+</head>
+
+<body>
+  <!-- <iframe frameborder="0" width="50%" height="50%" src="https://www.dailymotion.com/embed/video/xjoea3?autoPlay=1" allowfullscreen="" allow="autoplay" controls="false"></iframe> -->
+  <script src="https://api.dmcdn.net/all.js"></script>
+  <div id="player_container">
+    <div id="player"></div>
+  </div>
+  <script>
+    function startVideo() {
+      // Randomly start in the first 25 mins
+      var rand_start = Math.floor((Math.random() * 1500) + 0);
+      console.log(rand_start);
+      var player = DM.player(document.getElementById("player"), {
+          video: "xjoea3",
+          width: "3000px",
+          height: "3000px",
+          params: {
+            start: rand_start,
+            "queue-autoplay-next": false,
+            autoplay: true,
+            mute: true,
+            controls: false,
+            quality: "720",
+            "ui-start-screen-info": false,
+            "ui-logo": false
+          }
+      });
+      player.addEventListener("video_end", function(event) {
+        console.log("Video ended.");
+        startVideo();
+      })
+    }
+    startVideo();
+  </script>
+  <div id="overlay"></div>
+  <input type="text" value="brb" id="brb"></p>
+</body>
