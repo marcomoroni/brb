@@ -32,7 +32,7 @@ $(function() {
             fadeInBuffer = true;
         }, 5000)
     });
-    $('.html5gallery-box-0').css({
+    $('.body').css({
         cursor: 'default'
     });
 });
