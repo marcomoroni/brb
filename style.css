@@ -55,7 +55,7 @@ body {
   letter-spacing: 2px;
   display: block;
   width: 1200px;
-  top: 39%;
+  top: calc(50% - 90px);
   left: calc(50% - 600px);
   background-color: transparent;
   border: none;
