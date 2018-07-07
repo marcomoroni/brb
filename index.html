@@ -16,17 +16,15 @@
   <div id="player_container">
     <div id="player"></div>
   </div>
+
   <script>
-    function startVideo() {
-      // Randomly start in the first 25 mins
-      var rand_start = Math.floor((Math.random() * 1500) + 0);
-      console.log(rand_start);
+    function startVideo(startTime) {
       var player = DM.player(document.getElementById("player"), {
           video: "xjoea3",
           width: "3000px",
           height: "3000px",
           params: {
-            start: rand_start,
+            start: startTime,
             "queue-autoplay-next": false,
             autoplay: true,
             mute: true,
@@ -38,13 +36,18 @@
       });
       player.addEventListener("video_end", function(event) {
         console.log("Video ended.");
-        startVideo();
+        startVideo(0);
       })
     }
-    startVideo();
+    // Randomly start in the first 25 mins
+    var rand_start = Math.floor((Math.random() * 1500) + 0);
+    console.log(rand_start);
+    startVideo(rand_start);
   </script>
+
   <div id="overlay"></div>
   <input type="text" value="brb" id="brb"></p>
+
   <script>
   var theme = 0;
   document.onkeydown = function(){
@@ -64,4 +67,5 @@
     }
   }
   </script>
+  
 </body>
