@@ -64,3 +64,11 @@ body {
   background-color: transparent;
   border: none;
 }
+
+#overlay.light-theme {
+  background-color: white;
+}
+
+#brb.light-theme {
+  color: black;
+}
