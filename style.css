@@ -50,6 +50,7 @@ body {
   background-color: #202020;
   opacity: 0.6;
   animation: fadeout 40s;
+  transition: all 2s ease;
 }
 
 #brb {
@@ -63,7 +64,10 @@ body {
   top: calc(50% - 90px);
   background-color: transparent;
   border: none;
+  transition: all 2s ease;
 }
+
+/* THEMES *********************************/
 
 #overlay.light-theme {
   background-color: white;
@@ -72,3 +76,5 @@ body {
 #brb.light-theme {
   color: black;
 }
+
+/******************************************/
