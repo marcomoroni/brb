@@ -39,7 +39,7 @@ body {
 
 @keyframes fadeout {
   0% {opacity: 1;}
-  30% {opacity: 1;}
+  25% {opacity: 1;}
   100% {opacity: 0.6;}
 }
 
@@ -49,7 +49,7 @@ body {
   width: 100%;
   background-color: #202020;
   opacity: 0.6;
-  animation: fadeout 40s;
+  animation: fadeout 90s;
   transition: all 2s ease;
 }
 
